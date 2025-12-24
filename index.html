@@ -10,7 +10,7 @@
     <script>
         // Initialize EmailJS - REPLACE WITH YOUR PUBLIC KEY
         (function(){
-            emailjs.init("YOUR_PUBLIC_KEY_HERE"); // Replace with your actual public key
+            emailjs.init("jSZZQU_kxBt_T-lPx"); // Replace with your actual public key
         })();
     </script>
     
@@ -35,7 +35,7 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #6B2D8C 0%, #6B2D8C 100%);
+            background: linear-gradient(135deg, #6B2D8C 0%, #764ba2 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -94,7 +94,7 @@
         
         .section h2 {
             font-size: 2.2em;
-            color: #6B2D8C;
+            color: #2d3748;
             margin-bottom: 30px;
             text-align: center;
             font-weight: 800;
@@ -187,7 +187,7 @@
         }
         
         .rising {
-            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            background: linear-gradient(135deg, #D4AF37 0%, #D4AF37 100%);
         }
         
         .growth {
@@ -280,7 +280,7 @@
         .emphasis {
             background: linear-gradient(135deg, #fef5e7 0%, #fdeaa8 100%);
             padding: 30px;
-            border-left: 5px solid #f6ad55;
+            border-left: 5px solid #D4AF37;
             margin: 30px 0;
             border-radius: 8px;
         }
@@ -1118,7 +1118,7 @@
             
             // Send via EmailJS
             // REPLACE 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            emailjs.send('service_pp5u56r', 'template_tt4w4h6', templateParams)
                 .then(function(response) {
                     console.log('Email sent successfully!', response.status, response.text);
                     displayResults(results, true);
@@ -1151,7 +1151,7 @@
                         </p>
                     </div>
                     
-                    <div style="background: linear-gradient(135deg, ${emailSent ? '#6B2D8C 0%, #764ba2' : '#f6ad55 0%, #ed8936'} 100%); color: white; padding: 30px; border-radius: 12px; margin-top: 30px;">
+                    <div style="background: linear-gradient(135deg, ${emailSent ? '#6B2D8C 0%, #764ba2' : '#D4AF37 0%, #D4AF37'} 100%); color: white; padding: 30px; border-radius: 12px; margin-top: 30px;">
                         <h4 style="margin-bottom: 15px;">${emailSent ? '📧 Your Detailed Results Have Been Sent!' : '⚠️ Email Not Configured Yet'}</h4>
                         <p>${emailSent 
                             ? `Check your email at <strong>${userEmail}</strong> for your complete breakdown, personalized recommendations, and next steps for 2026.` 
@@ -1170,7 +1170,7 @@
                             <li style="padding: 8px 0; font-size: 1.05em;">✓ Accessing exclusive resources and tips</li>
                             <li style="padding: 8px 0; font-size: 1.05em;">✓ Building their income mindset daily</li>
                         </ul>
-                        <a href="YOUR_TELEGRAM_LINK_HERE" target="_blank" style="display: inline-block; background: white; color: #0088cc; padding: 18px 45px; font-size: 1.2em; font-weight: 700; text-decoration: none; border-radius: 50px; margin-top: 15px; box-shadow: 0 5px 20px rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                        <a href="https://t.me/+kJMVggh6291iYmRk" target="_blank" style="display: inline-block; background: white; color: #0088cc; padding: 18px 45px; font-size: 1.2em; font-weight: 700; text-decoration: none; border-radius: 50px; margin-top: 15px; box-shadow: 0 5px 20px rgba(255,255,255,0.3); transition: all 0.3s ease;">
                             Join the Community Now →
                         </a>
                         <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.85;">Free to join • Connect with growth-minded people</p>
@@ -1236,109 +1236,4 @@
                 }
             });
         });
-    </script>
-        const quizData = {
-            questions: [
-                // Mindset & Beliefs (4 questions)
-                {
-                    pillar: "Mindset & Beliefs",
-                    question: "When you think about earning significantly more money in 2026, what's your first thought?",
-                    options: [
-                        { text: "That would be amazing! I'm ready to make it happen.", score: 5 },
-                        { text: "I hope so, but I'm not sure how.", score: 3 },
-                        { text: "That sounds unrealistic for someone like me.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Mindset & Beliefs",
-                    question: "Complete this sentence: 'People who earn a lot of money are...'",
-                    options: [
-                        { text: "Lucky, privileged, or have connections I don't have.", score: 1 },
-                        { text: "Smart and strategic about opportunities.", score: 3 },
-                        { text: "People who positioned themselves well and took action.", score: 5 }
-                    ]
-                },
-                {
-                    pillar: "Mindset & Beliefs",
-                    question: "When you see someone your age succeeding financially, how do you feel?",
-                    options: [
-                        { text: "Inspired and curious about their strategies.", score: 5 },
-                        { text: "A bit jealous, wondering why it's not happening for me.", score: 3 },
-                        { text: "Skeptical—they probably got lucky or did something shady.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Mindset & Beliefs",
-                    question: "How do you respond when opportunities come your way?",
-                    options: [
-                        { text: "I go for it! Even if I'm nervous, I take action.", score: 5 },
-                        { text: "I think about it a lot, then sometimes talk myself out of it.", score: 3 },
-                        { text: "I assume I'm not ready yet or qualified enough.", score: 1 }
-                    ]
-                },
-                
-                // Clarity & Direction (4 questions)
-                {
-                    pillar: "Clarity & Direction",
-                    question: "Can you clearly describe what success looks like for you in 2026?",
-                    options: [
-                        { text: "Yes, I have specific goals and a vision.", score: 5 },
-                        { text: "Kind of—I have general ideas but no clear plan.", score: 3 },
-                        { text: "Not really. I'm just hoping things get better.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Clarity & Direction",
-                    question: "How would you describe your current career or business path?",
-                    options: [
-                        { text: "Clear and focused—I know where I'm going.", score: 5 },
-                        { text: "Confusing—I have too many ideas and don't know which to pursue.", score: 3 },
-                        { text: "Stuck—I'm not sure what direction to take.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Clarity & Direction",
-                    question: "Do you know what makes you valuable in the marketplace?",
-                    options: [
-                        { text: "Yes, I know my unique skills and strengths.", score: 5 },
-                        { text: "I have skills but don't know how to position them.", score: 3 },
-                        { text: "Not really—I feel average or replaceable.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Clarity & Direction",
-                    question: "When making decisions about your future, what guides you?",
-                    options: [
-                        { text: "My clear vision and long-term goals.", score: 5 },
-                        { text: "Whatever feels right in the moment.", score: 3 },
-                        { text: "Fear, pressure, or what others expect of me.", score: 1 }
-                    ]
-                },
-                
-                // Discipline & Habits (4 questions)
-                {
-                    pillar: "Discipline & Habits",
-                    question: "How consistently do you work on your goals?",
-                    options: [
-                        { text: "Daily or almost daily—I'm disciplined.", score: 5 },
-                        { text: "When I feel motivated, which comes and goes.", score: 3 },
-                        { text: "Rarely—I'm easily distracted or overwhelmed.", score: 1 }
-                    ]
-                },
-                {
-                    pillar: "Discipline & Habits",
-                    question: "How do you spend your free time?",
-                    options: [
-                        { text: "Learning, building skills, or working on my goals.", score: 5 },
-                        { text: "A mix—some productive, some just relaxing.", score: 3 },
-                        { text: "Mostly scrolling social media or watching TV.", score: 1 }
-                    ]
-                }   ,
-                {
-                    pillar: "Discipline & Habits",
-                    question: "When faced with a difficult task, what do you usually do?",
-                    options: [  
-                        { text: "Break it down and tackle it step by step.", score: 5 },
-                        { text: "Procrastinate a bit, then rush to finish it.", score: 3 },
-                        { text: "Avoid it or give up if it feels too hard.", score: 1 }
-                    ]
+    </script>   
