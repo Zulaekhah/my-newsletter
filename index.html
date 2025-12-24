@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Mailing List</title>
+    <title>The 2026 Income-Attraction Mindset Test | Bloom With Letorea</title>
+    
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS - REPLACE WITH YOUR PUBLIC KEY
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY_HERE"); // Replace with your actual public key
+        })();
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -12,327 +22,1323 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #e85b1c 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .form-container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 480px;
-            width: 100%;
-            transform: translateY(0);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .form-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #e85b1c, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .icon svg {
-            width: 30px;
-            height: 30px;
-            color: white;
-        }
-        
-        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
             color: #2d3748;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 10px;
+            background: #ffffff;
         }
         
-        .subtitle {
-            color: #718096;
-            font-size: 16px;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #6B2D8C 0%, #6B2D8C 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h2 {
+            font-size: 1.4em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0.95;
             line-height: 1.5;
         }
         
-        .form-group {
+        .hero p {
+            font-size: 1.1em;
             margin-bottom: 20px;
+            opacity: 0.9;
         }
         
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #2d3748;
-            font-size: 14px;
-        }
-        
-        input[type="text"],
-        input[type="email"] {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            background: #fafafa;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus {
-            outline: none;
-            border-color:#e85b1c;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-            background: white;
-        }
-        
-        .interests {
-            margin: 20px 0;
-        }
-        
-        .interests h3 {
-            color: #2d3748;
-            font-size: 16px;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-        
-        .checkbox-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .checkbox-item input[type="checkbox"] {
-            margin-right: 8px;
-            width: 18px;
-            height: 18px;
-            accent-color: #e85b1c;
-        }
-        
-        .checkbox-item label {
-            margin: 0;
-            font-size: 14px;
-            color: #718096;
+        .cta-button {
+            display: inline-block;
+            background: #D4AF37;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            border: none;
             cursor: pointer;
         }
         
-        .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #e85b1c, #c44919);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            background: #D4AF37;
+        }
+        
+        .section {
+            padding: 70px 20px;
+        }
+        
+        .section-alt {
+            background: #f7fafc;
+        }
+        
+        .section h2 {
+            font-size: 2.2em;
+            color: #6B2D8C;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 800;
+        }
+        
+        .section h3 {
+            font-size: 1.6em;
+            color: #6B2D8C;
+            margin: 30px 0 15px;
+            font-weight: 700;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .pain-box {
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #fc8181;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .pain-box p {
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .benefits-list li {
+            padding: 18px 0 18px 40px;
+            position: relative;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .benefits-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .pillars {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .pillar {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .pillar h4 {
+            color: #6B2D8C;
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .results-grid {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .result-card {
+            padding: 30px;
+            border-radius: 12px;
             color: white;
-            border: none;
-            padding: 14px 24px;
+        }
+        
+        .blocked {
+            background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+        }
+        
+        .rising {
+            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+        }
+        
+        .growth {
+            background: linear-gradient(135deg, #68d391 0%, #48bb78 100%);
+        }
+        
+        .result-card h4 {
+            font-size: 1.5em;
+            margin-bottom: 12px;
+        }
+        
+        .who-for-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .who-for-list li {
+            padding: 15px 0 15px 35px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        .who-for-list li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #6B2D8C;
+            font-weight: 900;
+            font-size: 1.3em;
+        }
+        
+        .about-box {
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #6B2D8C 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .faq {
+            margin: 50px 0;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .faq-item h4 {
+            color: #6B2D8C;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .final-cta {
+            background: #2d3748;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .emphasis {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdeaa8 100%);
+            padding: 30px;
+            border-left: 5px solid #f6ad55;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        /* Quiz Modal Styles */
+        .quiz-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background: white;
+            max-width: 700px;
+            margin: 40px auto;
+            border-radius: 12px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .quiz-progress {
+            background: #e2e8f0;
+            height: 8px;
             border-radius: 10px;
-            font-size: 16px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .quiz-progress-bar {
+            background: linear-gradient(90deg, #6B2D8C 0%, #764ba2 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-question {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.05em;
+        }
+
+        .quiz-option:hover {
+            background: #edf2f7;
+            border-color: #6B2D8C;
+            transform: translateX(5px);
+        }
+
+        .quiz-option.selected {
+            background: #6B2D8C;
+            color: white;
+            border-color: #6B2D8C;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .quiz-btn {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            margin-top: 10px;
+            transition: all 0.3s ease;
         }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(232, 91, 28, 0.3);
+
+        .quiz-btn-back {
+            background: #e2e8f0;
+            color: #2d3748;
         }
-        
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-        
-        .privacy-note {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #e85b1c;
-            line-height: 1.4;
-        }
-        
-        .success-message {
-            display: none;
-            background: linear-gradient(135deg, #e85b1c, #c44919);
+
+        .quiz-btn-next {
+            background: #6B2D8C;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 20px;
-            font-weight: 500;
         }
-        
-        @media (max-width: 600px) {
-            .form-container {
-                padding: 30px 20px;
-                margin: 10px;
+
+        .quiz-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .email-capture {
+            text-align: center;
+        }
+
+        .email-capture input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .email-capture input:focus {
+            outline: none;
+            border-color: #6B2D8C;
+        }
+
+        .results-section {
+            text-align: center;
+        }
+
+        .results-score {
+            font-size: 4em;
+            font-weight: 800;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #6B2D8C 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .results-category {
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .results-insights {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .results-insights h4 {
+            color: #6B2D8C;
+            margin-bottom: 15px;
+        }
+
+        .results-insights ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .results-insights li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+
+        .results-insights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #6B2D8C;
+            font-weight: bold;
+        }
+
+        .close-quiz {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #718096;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-quiz:hover {
+            color: #2d3748;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
             }
             
-            .checkbox-group {
-                grid-template-columns: 1fr;
+            .hero h2 {
+                font-size: 1.1em;
+            }
+            
+            .section h2 {
+                font-size: 1.7em;
+            }
+            
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1em;
+            }
+
+            .quiz-container {
+                padding: 25px;
+            }
+
+            .quiz-question {
+                font-size: 1.2em;
+            }
+
+            .quiz-buttons {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <div class="header">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.58 10.76C10.22 10.54 9.82 10.4 9.39 10.32L6.81 7.74L5.39 9.16L8.19 11.96C7.79 12.16 7.44 12.47 7.19 12.81L4 9.62L2.62 11L5.81 14.19C5.46 14.54 5.16 14.95 4.92 15.4L2 12.48L0.62 13.86L3.54 16.78C3.18 17.85 3.18 19.02 3.54 20.1L0.62 17.18L2 15.8L4.92 18.72C5.16 19.17 5.46 19.58 5.81 19.93L2.62 23.12L4 24.5L7.19 21.31C7.44 21.65 7.79 21.96 8.19 22.16L5.39 24.96L6.81 26.38L9.39 23.8C9.82 23.72 10.22 23.58 10.58 23.36L16.17 28.95L13.5 31.62L15 33.12L21 27.12V25.12L15.41 19.53C15.77 19.75 16.17 19.89 16.6 19.97L19.18 22.55L20.6 21.13L17.8 18.33C18.2 18.13 18.55 17.82 18.8 17.48L22 20.67L23.38 19.29L20.18 16.1C20.53 15.75 20.83 15.34 21.07 14.89L24 17.81L25.38 16.43L22.45 13.5C22.81 12.43 22.81 11.26 22.45 10.19L25.38 13.12L24 14.5L21.07 11.57C20.83 11.12 20.53 10.71 20.18 10.36L23.38 7.16L22 5.78L18.8 8.98C18.55 8.64 18.2 8.33 17.8 8.13L20.6 5.33L19.18 3.91L16.6 6.49C16.17 6.41 15.77 6.27 15.41 6.05L21 0.46V2.46L15.41 8.05C15.05 7.83 14.65 7.69 14.22 7.61L11.64 5.03L10.22 6.45L12.8 9.03C12.36 9.11 11.96 9.25 11.6 9.47L6.01 3.88V5.88L11.6 11.47C11.24 11.69 10.89 12 10.64 12.36L7.45 9.17L6.07 10.55L9.26 13.74C8.91 14.09 8.61 14.5 8.37 14.95L5.45 12.03L4.07 13.41L7 16.34C6.64 17.41 6.64 18.58 7 19.65L4.07 16.72L5.45 15.34L8.37 18.26C8.61 18.71 8.91 19.12 9.26 19.47L6.07 22.66L7.45 24.04L10.64 20.85C10.89 21.21 11.24 21.52 11.6 21.74L6.01 27.33V25.33L11.6 19.74C11.96 19.96 12.36 20.1 12.8 20.18L10.22 22.76L11.64 24.18L14.22 21.6C14.65 21.52 15.05 21.38 15.41 21.16L21 26.75V24.75L15.41 19.16C15.77 18.94 16.17 18.8 16.6 18.72L19.18 21.3L20.6 19.88L17.8 17.08C18.2 16.88 18.55 16.57 18.8 16.23L22 19.42L23.38 18.04L20.18 14.85C20.53 14.5 20.83 14.09 21.07 13.64L24 16.57L25.38 15.19L22.45 12.26C22.81 11.19 22.81 10.02 22.45 8.95L25.38 11.88L24 13.26L21.07 10.33C20.83 9.88 20.53 9.47 20.18 9.12L23.38 5.92L22 4.54L18.8 7.74C18.55 7.4 18.2 7.09 17.8 6.89L20.6 4.09L19.18 2.67L16.6 5.25C16.17 5.17 15.77 5.03 15.41 4.81L21 -0.78V1.22L15.41 6.81C15.05 6.59 14.65 6.45 14.22 6.37L11.64 3.79L10.22 5.21L12.8 7.79C12.36 7.87 11.96 8.01 11.6 8.23L6.01 2.64V4.64L11.6 10.23C11.24 10.45 10.89 10.76 10.64 11.12L7.45 7.93L6.07 9.31L9.26 12.5C8.91 12.85 8.61 13.26 8.37 13.71L5.45 10.79L4.07 12.17L7 15.1C6.64 16.17 6.64 17.34 7 18.41L4.07 15.48L5.45 14.1L8.37 17.02C8.61 17.47 8.91 17.88 9.26 18.23L6.07 21.42L7.45 22.8L10.64 19.61C10.89 19.97 11.24 20.28 11.6 20.5L6.01 26.09V24.09L11.6 18.5C11.96 18.72 12.36 18.86 12.8 18.94L10.22 21.52L11.64 22.94L14.22 20.36C14.65 20.28 15.05 20.14 15.41 19.92L21 25.51V23.51L15.41 17.92C15.77 17.7 16.17 17.56 16.6 17.48L19.18 20.06L20.6 18.64L17.8 15.84C18.2 15.64 18.55 15.33 18.8 14.99L22 18.18L23.38 16.8L20.18 13.61C20.53 13.26 20.83 12.85 21.07 12.4L24 15.33L25.38 13.95L22.45 11.02C22.81 9.95 22.81 8.78 22.45 7.71L25.38 10.64L24 12.02L21.07 9.09C20.83 8.64 20.53 8.23 20.18 7.88L23.38 4.68L22 3.3L18.8 6.5C18.55 6.16 18.2 5.85 17.8 5.65L20.6 2.85L19.18 1.43L16.6 4.01C16.17 3.93 15.77 3.79 15.41 3.57L21 -2.02V-0.02L15.41 5.57C15.05 5.35 14.65 5.21 14.22 5.13L11.64 2.55L10.22 3.97L12.8 6.55C12.36 6.63 11.96 6.77 11.6 6.99L6.01 1.4V3.4L11.6 8.99C11.24 9.21 10.89 9.52 10.64 9.88L7.45 6.69L6.07 8.07L9.26 11.26C8.91 11.61 8.61 12.02 8.37 12.47L5.45 9.55L4.07 10.93L7 13.86C6.64 14.93 6.64 16.1 7 17.17L4.07 14.24L5.45 12.86L8.37 15.78C8.61 16.23 8.91 16.64 9.26 16.99L6.07 20.18L7.45 21.56L10.64 18.37C10.89 18.73 11.24 19.04 11.6 19.26L6.01 24.85V22.85L11.6 17.26C11.96 17.48 12.36 17.62 12.8 17.7L10.22 20.28L11.64 21.7L14.22 19.12C14.65 19.04 15.05 18.9 15.41 18.68L21 24.27V22.27L15.41 16.68C15.77 16.46 16.17 16.32 16.6 16.24L19.18 18.82L20.6 17.4L17.8 14.6C18.2 14.4 18.55 14.09 18.8 13.75L22 16.94L23.38 15.56L20.18 12.37C20.53 12.02 20.83 11.61 21.07 11.16L24 14.09L25.38 12.71L22.45 9.78C22.81 8.71 22.81 7.54 22.45 6.47L25.38 9.4L24 10.78L21.07 7.85C20.83 7.4 20.53 6.99 20.18 6.64L23.38 3.44L22 2.06L18.8 5.26C18.55 4.92 18.2 4.61 17.8 4.41L20.6 1.61L19.18 0.19L16.6 2.77C16.17 2.69 15.77 2.55 15.41 2.33L21 -3.26V-1.26L15.41 4.33C15.05 4.11 14.65 3.97 14.22 3.89L11.64 1.31L10.22 2.73L12.8 5.31C12.36 5.39 11.96 5.53 11.6 5.75L6.01 0.16V2.16L11.6 7.75C11.24 7.97 10.89 8.28 10.64 8.64L7.45 5.45L6.07 6.83L9.26 10.02C8.91 10.37 8.61 10.78 8.37 11.23L5.45 8.31L4.07 9.69L7 12.62C6.64 13.69 6.64 14.86 7 15.93L4.07 13L5.45 11.62L8.37 14.54C8.61 14.99 8.91 15.4 9.26 15.75L6.07 18.94L7.45 20.32L10.64 17.13C10.89 17.49 11.24 17.8 11.6 18.02L6.01 23.61V21.61L11.6 16.02C11.96 16.24 12.36 16.38 12.8 16.46L10.22 19.04L11.64 20.46L14.22 17.88C14.65 17.8 15.05 17.66 15.41 17.44L21 23.03V21.03L15.41 15.44C15.77 15.22 16.17 15.08 16.6 15L19.18 17.58L20.6 16.16L17.8 13.36C18.2 13.16 18.55 12.85 18.8 12.51L22 15.7L23.38 14.32L20.18 11.13C20.53 10.78 20.83 10.37 21.07 9.92L24 12.85L25.38 11.47L22.45 8.54C22.81 7.47 22.81 6.3 22.45 5.23L25.38 8.16L24 9.54L21.07 6.61C20.83 6.16 20.53 5.75 20.18 5.4L23.38 2.2L22 0.82L18.8 4.02C18.55 3.68 18.2 3.37 17.8 3.17L20.6 0.37L19.18 -1.05L16.6 1.53C16.17 1.45 15.77 1.31 15.41 1.09L21 -4.5V-2.5L15.41 3.09C15.05 2.87 14.65 2.73 14.22 2.65L11.64 0.07L10.22 1.49L12.8 4.07C12.36 4.15 11.96 4.29 11.6 4.51L6.01 -1.08V0.92L11.6 6.51C11.24 6.73 10.89 7.04 10.64 7.4L7.45 4.21L6.07 5.59L9.26 8.78C8.91 9.13 8.61 9.54 8.37 9.99L5.45 7.07L4.07 8.45L7 11.38C6.64 12.45 6.64 13.62 7 14.69L4.07 11.76L5.45 10.38L8.37 13.3C8.61 13.75 8.91 14.16 9.26 14.51L6.07 17.7L7.45 19.08L10.64 15.89C10.89 16.25 11.24 16.56 11.6 16.78L6.01 22.37V20.37L11.6 14.78C11.96 15 12.36 15.14 12.8 15.22L10.22 17.8L11.64 19.22L14.22 16.64C14.65 16.56 15.05 16.42 15.41 16.2L21 21.79V19.79L15.41 14.2C15.77 13.98 16.17 13.84 16.6 13.76L19.18 16.34L20.6 14.92L17.8 12.12C18.2 11.92 18.55 11.61 18.8 11.27L22 14.46L23.38 13.08L20.18 9.89C20.53 9.54 20.83 9.13 21.07 8.68L24 11.61L25.38 10.23L22.45 7.3C22.81 6.23 22.81 5.06 22.45 3.99L25.38 6.92L24 8.3L21.07 5.37C20.83 4.92 20.53 4.51 20.18 4.16L23.38 0.96L22 -0.42L18.8 2.78C18.55 2.44 18.2 2.13 17.8 1.93L20.6 -0.87L19.18 -2.29L16.6 0.29C16.17 0.21 15.77 0.07 15.41 -0.15L21 -5.74V-3.74L15.41 1.85C15.05 1.63 14.65 1.49 14.22 1.41L11.64 -1.17L10.22 0.25L12.8 2.83C12.36 2.91 11.96 3.05 11.6 3.27L6.01 -2.32V-0.32L11.6 5.27C11.24 5.49 10.89 5.8 10.64 6.16L7.45 2.97L6.07 4.35L9.26 7.54C8.91 7.89 8.61 8.3 8.37 8.75L5.45 5.83L4.07 7.21L7 10.14C6.64 11.21 6.64 12.38 7 13.45L4.07 10.52L5.45 9.14L8.37 12.06C8.61 12.51 8.91 12.92 9.26 13.27L6.07 16.46L7.45 17.84L10.64 14.65C10.89 15.01 11.24 15.32 11.6 15.54L6.01 21.13V19.13L11.6 13.54C11.96 13.76 12.36 13.9 12.8 13.98L10.22 16.56L11.64 17.98L14.22 15.4C14.65 15.32 15.05 15.18 15.41 14.96L21 20.55V18.55L15.41 12.96C15.77 12.74 16.17 12.6 16.6 12.52L19.18 15.1L20.6 13.68L17.8 10.88C18.2 10.68 18.55 10.37 18.8 10.03L22 13.22L23.38 11.84L20.18 8.65C20.53 8.3 20.83 7.89 21.07 7.44L24 10.37L25.38 8.99L22.45 6.06C22.81 4.99 22.81 3.82 22.45 2.75L25.38 5.68L24 7.06L21.07 4.13C20.83 3.68 20.53 3.27 20.18 2.92L23.38 -0.28L22 -1.66L18.8 1.54C18.55 1.2 18.2 0.89 17.8 0.69L20.6 -2.11L19.18 -3.53L16.6 -0.95C16.17 -1.03 15.77 -1.17 15.41 -1.39L21 -6.98V-4.98L15.41 0.61C15.05 0.39 14.65 0.25 14.22 0.17L11.64 -2.41L10.22 -0.99L12.8 1.59C12.36 1.67 11.96 1.81 11.6 2.03L6.01 -3.56V-1.56L11.6 4.03C11.24 4.25 10.89 4.56 10.64 4.92L7.45 1.73L6.07 3.11L9.26 6.3C8.91 6.65 8.61 7.06 8.37 7.51L5.45 4.59L4.07 5.97L7 8.9C6.64 9.97 6.64 11.14 7 12.21L4.07 9.28L5.45 7.9L8.37 10.82C8.61 11.27 8.91 11.68 9.26 12.03L6.07 15.22L7.45 16.6L10.64 13.41C10.89 13.77 11.24 14.08 11.6 14.3L6.01 19.89V17.89L11.6 12.3C11.96 12.52 12.36 12.66 12.8 12.74L10.22 15.32L11.64 16.74L14.22 14.16C14.65 14.08 15.05 13.94 15.41 13.72L21 19.31V17.31L15.41 11.72C15.77 11.5 16.17 11.36 16.6 11.28L19.18 13.86L20.6 12.44L17.8 9.64C18.2 9.44 18.55 9.13 18.8 8.79L22 11.98L23.38 10.6L20.18 7.41C20.53 7.06 20.83 6.65 21.07 6.2L24 9.13L25.38 7.75L22.45 4.82C22.81 3.75 22.81 2.58 22.45 1.51L25.38 4.44L24 5.82L21.07 2.89C20.83 2.44 20.53 2.03 20.18 1.68L23.38 -1.52L22 -2.9L18.8 0.3C18.55 -0.04 18.2 -0.35 17.8 -0.55L20.6 -3.35L19.18 -4.77L16.6 -2.19L16.6 -2.19Z"/>
-                </svg>
-            </div>
-            <h1>Transform Your Communication</h1>
-            <p class="subtitle">Join our community and receive weekly insights on effective communication, personal growth strategies, and practical tips for meaningful connections.</p>
+    <section class="hero">
+        <div class="container">
+            <h1>The 2026 Income-Attraction Mindset Test</h1>
+            <h2>Are You Really Ready to Earn More in 2026? Or Are Hidden Blocks Holding You Back?</h2>
+            <p>Take this 5-minute test to discover the invisible mindset patterns, habits, and blind spots silently limiting your income potential — and what to fix before the new year begins.</p>
+            <p>Most people enter a new year with hope but no real plan. They want more money, better opportunities, and real growth — but they don't know <em>why</em> it's not happening yet.</p>
+            <p><strong>The truth?</strong> Your earning potential isn't just about hard work. It's about <em>how you think, communicate, position yourself, and show up</em> in the marketplace.</p>
+            <p>This free assessment will show you exactly where you're blocked — and what you need to unlock before 2026.</p>
+            <button class="cta-button" id="startQuizBtn1">Take the 5-Minute Test — It's Free</button>
         </div>
-        
-        <form id="mailingListForm">
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>If You're Entering 2026 Feeling This Way, You're Not Alone</h2>
+            <p>Let's be honest about what's really happening:</p>
+            
+            <div class="pain-box">
+                <p><strong>The economy is tough.</strong> Inflation keeps rising. Salaries aren't catching up. The cost of living in Nigeria feels heavier every month. You're working hard, but the money isn't matching the effort.</p>
+                
+                <p><strong>You feel stuck.</strong> You've been in the same income bracket for too long. You see others making moves, landing clients, getting promotions, building businesses — and you wonder, <em>"Why not me?"</em></p>
+                
+                <p><strong>You're confused about your next step.</strong> You have ideas, talents, and ambition — but you don't know which direction to go. Should you start a side hustle? Switch careers? Learn a new skill? The options are overwhelming, so you stay where you are.</p>
+                
+                <p><strong>You're afraid 2026 will be the same as 2024 and 2025.</strong> Another year of hoping, hustling without strategy, and ending December frustrated that nothing really changed.</p>
             </div>
             
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+            <p>Here's what most people don't realize:</p>
+            
+            <div class="emphasis">
+                <p><strong>The problem isn't your potential. It's your mindset, clarity, and positioning.</strong></p>
+                <p>The way you think about money, opportunity, and yourself directly affects what you attract. If your internal systems are blocked, your external results will be too.</p>
             </div>
             
-            <div class="interests">
-                <h3>What interests you most? (Optional)</h3>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="communication" name="interests" value="Communication Skills">
-                        <label for="communication">Communication Skills</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="relationships" name="interests" value="Relationships">
-                        <label for="relationships">Personal Reflections</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="leadership" name="interests" value="Leadership">
-                        <label for="leadership">Leadership</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="confidence" name="interests" value="Personal Growth">
-                        <label for="confidence">Personal Growth</label>
-                    </div>
+            <p style="text-align: center; font-size: 1.2em; font-weight: 600;">That's why this test exists.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2>What This Test Will Help You Discover</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">In just 5 minutes, you'll uncover:</p>
+            
+            <ul class="benefits-list">
+                <li><strong>Your biggest earning block</strong> — the one thing stopping money, opportunities, and growth from flowing to you</li>
+                <li><strong>Your clarity gaps</strong> — where you're confused, unfocused, or moving without a real plan</li>
+                <li><strong>Your hidden strengths</strong> — the skills and qualities you've been underusing (or undervaluing)</li>
+                <li><strong>Your sabotaging patterns</strong> — the beliefs, habits, and behaviors that keep you small without you even realizing it</li>
+                <li><strong>The habits limiting your growth</strong> — what you do daily that's quietly keeping you stuck</li>
+                <li><strong>Your communication and confidence gaps</strong> — how you show up (or hide) in ways that block opportunities</li>
+                <li><strong>What you must fix before 2026</strong> — your personalized next steps to start the year with momentum, not confusion</li>
+            </ul>
+            
+            <p style="text-align: center; font-size: 1.2em; font-weight: 600; margin-top: 40px;">This isn't just a quiz. It's a mirror. And it will show you the truth about what's really holding you back.</p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="cta-button" id="startQuizBtn2">Start Your Test Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>How the Test Works</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">The 2026 Income-Attraction Mindset Test evaluates you across <strong>5 critical pillars</strong> that directly impact your ability to attract income, opportunities, and growth:</p>
+            
+            <div class="pillars">
+                <div class="pillar">
+                    <h4>1. Mindset & Beliefs</h4>
+                    <p>How you think about money, success, and yourself. Do you believe you're worthy of earning more? Or are you carrying limiting beliefs that keep you playing small?</p>
+                </div>
+                
+                <div class="pillar">
+                    <h4>2. Clarity & Direction</h4>
+                    <p>Do you know where you're going? Or are you moving without a map, hoping something will work out? Clarity is power — and confusion is expensive.</p>
+                </div>
+                
+                <div class="pillar">
+                    <h4>3. Discipline & Habits</h4>
+                    <p>What you do daily creates your future. Are your habits aligned with growth, or are they keeping you comfortable and stuck?</p>
+                </div>
+                
+                <div class="pillar">
+                    <h4>4. Communication & Confidence</h4>
+                    <p>How you speak, show up, and present yourself determines what doors open for you. Are you communicating your value clearly? Or are you invisible to the opportunities you want?</p>
+                </div>
+                
+                <div class="pillar">
+                    <h4>5. Value Positioning</h4>
+                    <p>Do people see you as valuable, skilled, and worth paying? Or are you underselling yourself, undercharging, or waiting to be discovered?</p>
                 </div>
             </div>
             
-            <button type="submit" class="submit-btn">Join Our Community</button>
-        </form>
-        
-        <div class="success-message" id="successMessage">
-            🎉 Welcome to our community! You are set to receive our letters.
+            <h3 style="text-align: center; margin-top: 50px; color: #2d3748;">Your Results Will Place You in One of Three Categories:</h3>
+            
+            <div class="results-grid">
+                <div class="result-card blocked">
+                    <h4>🔴 The Blocked Earner</h4>
+                    <p>You're working hard but seeing little return. Your mindset, clarity, and habits are silently holding you back. You need to unblock your thinking and reposition yourself before 2026.</p>
+                </div>
+                
+                <div class="result-card rising">
+                    <h4>🟡 The Rising Achiever</h4>
+                    <p>You're making progress, but you're inconsistent. You have potential, but you're not maximizing it. A few key shifts will take you to the next level.</p>
+                </div>
+                
+                <div class="result-card growth">
+                    <h4>🟢 The Growth Magnet</h4>
+                    <p>You're aligned, focused, and positioned for growth. You attract opportunities because your mindset, habits, and communication are working <em>for</em> you, not against you.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 1.1em; margin-top: 40px;">No matter where you land, you'll get personalized insights and actionable next steps.</p>
         </div>
-        
-        <div class="privacy-note">
-            We respect your privacy and will never share your information. Unsubscribe anytime with one click.
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2>About Bloom With Letorea</h2>
+            <div class="about-box">
+                <p style="font-size: 1.1em;">Bloom With Letorea is the personal development arm of Letorea Learning Hub, created to help ambitious individuals — especially women and young professionals across Nigeria and Africa — build the confidence, clarity, communication skills, mindset, and inner alignment that attract real growth and opportunities. We believe that your external success is a reflection of your internal world. When you work on yourself from the inside out, everything changes. This test is one of the tools we've created to help you start that journey with honesty, clarity, and actionable insight.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>2026 Is Too Important to Enter Blindly. Start With Clarity.</h2>
+            <p>You have two choices:</p>
+            <p><strong>Option 1:</strong> Enter 2026 the way you entered 2025 — with hope, hustle, and no real plan. Work hard all year and wonder in December why nothing changed.</p>
+            <p><strong>Option 2:</strong> Take 5 minutes right now to discover what's <em>really</em> blocking your income and growth. Get clarity. Fix what's broken. Enter the new year with a plan, not just a wish.</p>
+            <p style="font-size: 1.1em; margin-top: 30px;">The test is free. The insights are priceless.</p>
+            <button class="cta-button" id="startQuizBtn3">Take the Test Now — It's Free</button>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 30px;">Your 2026 Starts Today</h2>
+            <p>You don't need more motivation. You need more clarity.</p>
+            <p>You don't need more hustle. You need better alignment.</p>
+            <p>You don't need to hope things will change. You need to understand <em>why</em> they haven't — and fix it.</p>
+            <p style="font-size: 1.3em; margin-top: 30px; font-weight: 600;">This test will show you the truth. And the truth will set you free.</p>
+            <button class="cta-button" id="startQuizBtn4" style="margin-top: 30px;">Take the 5-Minute Test — It's Free</button>
+            <p style="margin-top: 50px; font-size: 1.1em; opacity: 0.85;"><em>2026 belongs to the people who are willing to look inward, grow honestly, and position themselves intentionally. Will that be you?</em></p>
+        </div>
+    </section>
+
+    <!-- Quiz Modal -->
+    <div class="quiz-modal" id="quizModal">
+        <div class="quiz-container">
+            <button class="close-quiz" id="closeQuizBtn">×</button>
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar" id="progressBar"></div>
+            </div>
+            <div id="quizContent"></div>
         </div>
     </div>
 
     <script>
-        // Google Form configuration
-        const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSedymFl2L8uzdiNIS6-KIU3TUNcU3pg_Gjw4W-SH5ptheIP2Q/formResponse';
-        const FIELD_MAPPINGS = {
-            firstName: 'entry.1870039818',
-            email: 'entry.155756515',
-            interests: 'entry.89011324'
+        // Define all functions first
+        let currentQuestion = 0;
+        let answers = [];
+        let userEmail = '';
+        let userName = '';
+        
+        const quizData = {
+            questions: [
+                // Mindset & Beliefs (4 questions)
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "When you think about earning significantly more money in 2026, what's your first thought?",
+                    options: [
+                        { text: "That would be amazing! I'm ready to make it happen.", score: 5 },
+                        { text: "I hope so, but I'm not sure how.", score: 3 },
+                        { text: "That sounds unrealistic for someone like me.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "Complete this sentence: 'People who earn a lot of money are...'",
+                    options: [
+                        { text: "Lucky, privileged, or have connections I don't have.", score: 1 },
+                        { text: "Smart and strategic about opportunities.", score: 3 },
+                        { text: "People who positioned themselves well and took action.", score: 5 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "When you see someone your age succeeding financially, how do you feel?",
+                    options: [
+                        { text: "Inspired and curious about their strategies.", score: 5 },
+                        { text: "A bit jealous, wondering why it's not happening for me.", score: 3 },
+                        { text: "Skeptical—they probably got lucky or did something shady.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "How do you respond when opportunities come your way?",
+                    options: [
+                        { text: "I go for it! Even if I'm nervous, I take action.", score: 5 },
+                        { text: "I think about it a lot, then sometimes talk myself out of it.", score: 3 },
+                        { text: "I assume I'm not ready yet or qualified enough.", score: 1 }
+                    ]
+                },
+                
+                // Clarity & Direction (4 questions)
+                {
+                    pillar: "Clarity & Direction",
+                    question: "Can you clearly describe what success looks like for you in 2026?",
+                    options: [
+                        { text: "Yes, I have specific goals and a vision.", score: 5 },
+                        { text: "Kind of—I have general ideas but no clear plan.", score: 3 },
+                        { text: "Not really. I'm just hoping things get better.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "How would you describe your current career or business path?",
+                    options: [
+                        { text: "Clear and focused—I know where I'm going.", score: 5 },
+                        { text: "Confusing—I have too many ideas and don't know which to pursue.", score: 3 },
+                        { text: "Stuck—I'm not sure what direction to take.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "Do you know what makes you valuable in the marketplace?",
+                    options: [
+                        { text: "Yes, I know my unique skills and strengths.", score: 5 },
+                        { text: "I have skills but don't know how to position them.", score: 3 },
+                        { text: "Not really—I feel average or replaceable.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "When making decisions about your future, what guides you?",
+                    options: [
+                        { text: "My clear vision and long-term goals.", score: 5 },
+                        { text: "Whatever feels right in the moment.", score: 3 },
+                        { text: "Fear, pressure, or what others expect of me.", score: 1 }
+                    ]
+                },
+                
+                // Discipline & Habits (4 questions)
+                {
+                    pillar: "Discipline & Habits",
+                    question: "How consistently do you work on your goals?",
+                    options: [
+                        { text: "Daily or almost daily—I'm disciplined.", score: 5 },
+                        { text: "When I feel motivated, which comes and goes.", score: 3 },
+                        { text: "Rarely—I'm easily distracted or overwhelmed.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Discipline & Habits",
+                    question: "How do you spend your free time?",
+                    options: [
+                        { text: "Learning, building skills, or working on my goals.", score: 5 },
+                        { text: "A mix—some productive, some just relaxing.", score: 3 },
+                        { text: "Mostly scrolling social media or watching TV.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Discipline & Habits",
+                    question: "When faced with a difficult task, what do you usually do?",
+                    options: [
+                        { text: "Break it down and tackle it step by step.", score: 5 },
+                        { text: "Procrastinate a bit, then rush to finish it.", score: 3 },
+                        { text: "Avoid it or give up if it feels too hard.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Discipline & Habits",
+                    question: "Do you have a morning or daily routine that sets you up for success?",
+                    options: [
+                        { text: "Yes, and I stick to it most days.", score: 5 },
+                        { text: "I try, but it's inconsistent.", score: 3 },
+                        { text: "No, my days feel chaotic and reactive.", score: 1 }
+                    ]
+                },
+                
+                // Communication & Confidence (4 questions)
+                {
+                    pillar: "Communication & Confidence",
+                    question: "How comfortable are you talking about your skills and accomplishments?",
+                    options: [
+                        { text: "Very comfortable—I know my value and can express it.", score: 5 },
+                        { text: "Somewhat comfortable, but I downplay myself sometimes.", score: 3 },
+                        { text: "Uncomfortable—I feel like I'm bragging.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Communication & Confidence",
+                    question: "When networking or meeting new people, how do you show up?",
+                    options: [
+                        { text: "Confident and clear about who I am and what I offer.", score: 5 },
+                        { text: "Friendly but unsure how to position myself.", score: 3 },
+                        { text: "Nervous or invisible—I don't speak up much.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Communication & Confidence",
+                    question: "How do you handle rejection or criticism?",
+                    options: [
+                        { text: "I see it as feedback and keep moving forward.", score: 5 },
+                        { text: "It bothers me, but I eventually recover.", score: 3 },
+                        { text: "It crushes me and makes me doubt myself.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Communication & Confidence",
+                    question: "Can you clearly explain what you do and why people should work with you?",
+                    options: [
+                        { text: "Yes, I have a clear and compelling pitch.", score: 5 },
+                        { text: "Kind of, but it feels unclear or generic.", score: 3 },
+                        { text: "No, I struggle to articulate my value.", score: 1 }
+                    ]
+                },
+                
+                // Value Positioning (4 questions)
+                {
+                    pillar: "Value Positioning",
+                    question: "How do you price your services or value your time?",
+                    options: [
+                        { text: "Based on the value I provide—I charge what I'm worth.", score: 5 },
+                        { text: "I'm not sure, so I usually charge less to be safe.", score: 3 },
+                        { text: "I undercharge because I don't want to scare people away.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Value Positioning",
+                    question: "Do people seek you out for opportunities, or do you always have to chase them?",
+                    options: [
+                        { text: "People come to me—I'm seen as valuable.", score: 5 },
+                        { text: "Sometimes both, but inconsistently.", score: 3 },
+                        { text: "I'm always chasing—no one reaches out to me.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Value Positioning",
+                    question: "How visible are you in your industry or community?",
+                    options: [
+                        { text: "Very visible—I share my work and build my presence.", score: 5 },
+                        { text: "Somewhat visible, but inconsistently.", score: 3 },
+                        { text: "Invisible—I stay quiet and hope to be discovered.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Value Positioning",
+                    question: "When someone asks what makes you different, what do you say?",
+                    options: [
+                        { text: "I have a clear answer that sets me apart.", score: 5 },
+                        { text: "I struggle to differentiate myself from others.", score: 3 },
+                        { text: "I don't think I'm that different from anyone else.", score: 1 }
+                    ]
+                }
+            ]
         };
 
-        document.getElementById('mailingListForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
+        function startQuiz() {
+            console.log('Start quiz called');
+            document.getElementById('quizModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            showEmailCapture();
+        }
+
+        function closeQuiz() {
+            document.getElementById('quizModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            currentQuestion = 0;
+            answers = [];
+        }
+
+        function showEmailCapture() {
+            const content = `
+                <div class="email-capture">
+                    <h2 style="color: #6B2D8C; margin-bottom: 20px;">Let's Get Started!</h2>
+                    <p style="margin-bottom: 30px; font-size: 1.1em;">Enter your details to receive your personalized results:</p>
+                    <input type="text" id="userName" placeholder="Your First Name" required>
+                    <input type="email" id="userEmail" placeholder="Your Email Address" required>
+                    <button class="cta-button" id="beginTestBtn" style="width: 100%; margin-top: 10px;">Begin My Test</button>
+                    <p style="font-size: 0.9em; color: #718096; margin-top: 20px;">We respect your privacy. Your results will be sent instantly.</p>
+                </div>
+            `;
+            document.getElementById('quizContent').innerHTML = content;
+            updateProgress();
             
-            const form = e.target;
-            const submitBtn = form.querySelector('.submit-btn');
-            const successMessage = document.getElementById('successMessage');
+            // Add event listener to begin test button
+            setTimeout(() => {
+                document.getElementById('beginTestBtn').addEventListener('click', startTest);
+            }, 100);
+        }
+
+        function startTest() {
+            userName = document.getElementById('userName').value.trim();
+            userEmail = document.getElementById('userEmail').value.trim();
             
-            // Show loading state
-            submitBtn.innerHTML = 'Joining...';
-            submitBtn.disabled = true;
+            if (!userName || !userEmail) {
+                alert('Please enter both your name and email.');
+                return;
+            }
             
-            try {
-                // Collect form data
-                const formData = new FormData();
-                formData.append(FIELD_MAPPINGS.firstName, form.firstName.value);
-                formData.append(FIELD_MAPPINGS.email, form.email.value);
-                
-                // Collect selected interests
-                const selectedInterests = [];
-                const interestCheckboxes = form.querySelectorAll('input[name="interests"]:checked');
-                interestCheckboxes.forEach(checkbox => {
-                    selectedInterests.push(checkbox.value);
+            if (!isValidEmail(userEmail)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            currentQuestion = 0;
+            answers = [];
+            showQuestion();
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showQuestion() {
+            const q = quizData.questions[currentQuestion];
+            const totalQuestions = quizData.questions.length;
+            
+            let optionsHTML = '';
+            q.options.forEach((option, index) => {
+                optionsHTML += `
+                    <div class="quiz-option" data-index="${index}">
+                        ${option.text}
+                    </div>
+                `;
+            });
+            
+            const content = `
+                <div class="quiz-step active">
+                    <p style="color: #6B2D8C; font-weight: 600; margin-bottom: 10px;">
+                        Question ${currentQuestion + 1} of ${totalQuestions} • ${q.pillar}
+                    </p>
+                    <h3 class="quiz-question">${q.question}</h3>
+                    <div class="quiz-options" id="options">
+                        ${optionsHTML}
+                    </div>
+                    <div class="quiz-buttons">
+                        ${currentQuestion > 0 ? '<button class="quiz-btn quiz-btn-back" id="backBtn">Back</button>' : ''}
+                        <button class="quiz-btn quiz-btn-next" id="nextBtn" disabled>
+                            ${currentQuestion === totalQuestions - 1 ? 'See My Results' : 'Next'}
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('quizContent').innerHTML = content;
+            updateProgress();
+            
+            // Add event listeners after content is rendered
+            setTimeout(() => {
+                const options = document.querySelectorAll('.quiz-option');
+                options.forEach((opt, index) => {
+                    opt.addEventListener('click', () => selectOption(index));
                 });
                 
-                if (selectedInterests.length > 0) {
-                    formData.append(FIELD_MAPPINGS.interests, selectedInterests.join(', '));
+                const nextBtn = document.getElementById('nextBtn');
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', nextQuestion);
                 }
                 
-                // Submit to Google Forms using a hidden iframe
-                const iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.name = 'hidden_iframe';
-                document.body.appendChild(iframe);
-                
-                const hiddenForm = document.createElement('form');
-                hiddenForm.method = 'POST';
-                hiddenForm.action = GOOGLE_FORM_URL;
-                hiddenForm.target = 'hidden_iframe';
-                
-                // Add form data as hidden inputs
-                for (let [key, value] of formData.entries()) {
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = key;
-                    input.value = value;
-                    hiddenForm.appendChild(input);
+                const backBtn = document.getElementById('backBtn');
+                if (backBtn) {
+                    backBtn.addEventListener('click', previousQuestion);
                 }
-                
-                document.body.appendChild(hiddenForm);
-                hiddenForm.submit();
-                
-                // Clean up
-                setTimeout(() => {
-                    document.body.removeChild(iframe);
-                    document.body.removeChild(hiddenForm);
-                }, 1000);
-                
-                // Show success message
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                
-            } catch (error) {
-                console.error('Error submitting form:', error);
-                
-                // Reset button and show error
-                submitBtn.innerHTML = 'Try Again';
-                submitBtn.disabled = false;
-                alert('Sorry, there was an error submitting your form. Please try again.');
+            }, 100);
+        }
+
+        function selectOption(index) {
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[index].classList.add('selected');
+            
+            answers[currentQuestion] = quizData.questions[currentQuestion].options[index].score;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (answers[currentQuestion] === undefined) {
+                alert('Please select an answer.');
+                return;
             }
+            
+            if (currentQuestion < quizData.questions.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / (quizData.questions.length + 1)) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function calculateResults() {
+            const totalScore = answers.reduce((sum, score) => sum + score, 0);
+            const maxScore = quizData.questions.length * 5;
+            const percentage = (totalScore / maxScore) * 100;
+            
+            let category, categoryClass, insights;
+            
+            if (percentage < 50) {
+                category = "The Blocked Earner";
+                categoryClass = "blocked";
+                insights = {
+                    title: "Your Current Reality",
+                    items: [
+                        "You're working hard but your internal systems (mindset, clarity, habits) are holding you back.",
+                        "You may be carrying limiting beliefs about money, success, or your own worthiness.",
+                        "Your lack of clarity and direction is causing you to move without a real strategy.",
+                        "You need to rebuild your foundation before 2026 starts."
+                    ],
+                    action: "What You Need: A complete mindset reset, clarity on your direction, and new habits that align with growth."
+                };
+            } else if (percentage < 75) {
+                category = "The Rising Achiever";
+                categoryClass = "rising";
+                insights = {
+                    title: "Your Current Reality",
+                    items: [
+                        "You have potential and you're making some progress, but it's inconsistent.",
+                        "You know what to do, but you're not doing it consistently enough to see major results.",
+                        "Your confidence and positioning need strengthening to attract bigger opportunities.",
+                        "You're close to a breakthrough—you just need to close the gaps."
+                    ],
+                    action: "What You Need: Consistency, better positioning, and a confidence boost to take you to the next level."
+                };
+            } else {
+                category = "The Growth Magnet";
+                categoryClass = "growth";
+                insights = {
+                    title: "Your Current Reality",
+                    items: [
+                        "You're aligned, focused, and positioned for growth.",
+                        "Your mindset, habits, and communication are working FOR you, not against you.",
+                        "You attract opportunities because you show up with clarity and confidence.",
+                        "You're ready to scale and multiply your impact in 2026."
+                    ],
+                    action: "What You Need: Strategic scaling, deeper relationships, and systems to handle your growth."
+                };
+            }
+            
+            return { totalScore, maxScore, percentage, category, categoryClass, insights };
+        }
+
+        function showResults() {
+            const results = calculateResults();
+            
+            // Show loading state
+            document.getElementById('quizContent').innerHTML = `
+                <div class="results-section" style="text-align: center;">
+                    <h2 style="color: #6B2D8C;">Calculating Your Results...</h2>
+                    <p style="margin-top: 20px;">Please wait while we prepare your personalized insights.</p>
+                </div>
+            `;
+            
+            // Send email
+            sendResultsEmail(results);
+        }
+        
+        function sendResultsEmail(results) {
+            // Format insights for email
+            const insightsText = results.insights.items.map((item, i) => `${i + 1}. ${item}`).join('\n');
+            
+            // Prepare email parameters
+            const templateParams = {
+                user_name: userName,
+                user_email: userEmail,
+                score: results.totalScore,
+                max_score: results.maxScore,
+                percentage: Math.round(results.percentage),
+                category: results.category,
+                insights: insightsText,
+                action_steps: results.insights.action
+            };
+            
+            // Send via EmailJS
+            // REPLACE 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    displayResults(results, true);
+                }, function(error) {
+                    console.error('Email failed to send:', error);
+                    displayResults(results, false);
+                });
+        }
+        
+        function displayResults(results, emailSent) {
+            
+            const content = `
+                <div class="results-section">
+                    <h2 style="color: #2d3748; margin-bottom: 10px;">Your Results Are In, ${userName}!</h2>
+                    <div class="results-score">${Math.round(results.percentage)}%</div>
+                    <p style="font-size: 1.2em; margin-bottom: 30px;">Your Income-Attraction Readiness Score</p>
+                    
+                    <div class="results-category ${results.categoryClass}">
+                        <h3 style="font-size: 1.8em; margin-bottom: 15px;">${results.category}</h3>
+                        <p style="font-size: 1.1em; opacity: 0.95;">Score: ${results.totalScore} out of ${results.maxScore}</p>
+                    </div>
+                    
+                    <div class="results-insights">
+                        <h4>${results.insights.title}</h4>
+                        <ul>
+                            ${results.insights.items.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        <p style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #e2e8f0; font-weight: 600; color: #6B2D8C;">
+                            ${results.insights.action}
+                        </p>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, ${emailSent ? '#6B2D8C 0%, #764ba2' : '#f6ad55 0%, #ed8936'} 100%); color: white; padding: 30px; border-radius: 12px; margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;">${emailSent ? '📧 Your Detailed Results Have Been Sent!' : '⚠️ Email Not Configured Yet'}</h4>
+                        <p>${emailSent 
+                            ? `Check your email at <strong>${userEmail}</strong> for your complete breakdown, personalized recommendations, and next steps for 2026.` 
+                            : 'Your results are displayed above. To receive them via email, the site owner needs to configure the email service. You can screenshot these results for your records.'
+                        }</p>
+                        ${emailSent ? '<p style="margin-top: 15px; font-size: 0.95em; opacity: 0.9;">Don\'t see it? Check your spam folder.</p>' : ''}
+                    </div>
+                    
+                    <!-- TELEGRAM COMMUNITY CTA -->
+                    <div style="background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%); color: white; padding: 35px; border-radius: 12px; margin-top: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,136,204,0.3);">
+                        <h3 style="font-size: 1.6em; margin-bottom: 15px;">🚀 Ready to Turn These Insights Into Action?</h3>
+                        <p style="font-size: 1.1em; margin-bottom: 10px; opacity: 0.95;">Join our exclusive Telegram community where ambitious people like you are:</p>
+                        <ul style="list-style: none; margin: 20px 0; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto;">
+                            <li style="padding: 8px 0; font-size: 1.05em;">✓ Sharing growth strategies and wins</li>
+                            <li style="padding: 8px 0; font-size: 1.05em;">✓ Getting accountability and support</li>
+                            <li style="padding: 8px 0; font-size: 1.05em;">✓ Accessing exclusive resources and tips</li>
+                            <li style="padding: 8px 0; font-size: 1.05em;">✓ Building their income mindset daily</li>
+                        </ul>
+                        <a href="YOUR_TELEGRAM_LINK_HERE" target="_blank" style="display: inline-block; background: white; color: #0088cc; padding: 18px 45px; font-size: 1.2em; font-weight: 700; text-decoration: none; border-radius: 50px; margin-top: 15px; box-shadow: 0 5px 20px rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                            Join the Community Now →
+                        </a>
+                        <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.85;">Free to join • Connect with growth-minded people</p>
+                    </div>
+                    
+                    <button class="cta-button" id="closeResultsBtn" style="margin-top: 30px;">Close</button>
+                    
+                    <p style="margin-top: 20px; font-size: 0.95em; color: #718096;">
+                        Want to work on these areas? Follow Bloom With Letorea for resources, tips, and guidance.
+                    </p>
+                </div>
+            `;
+            
+            document.getElementById('quizContent').innerHTML = content;
+            document.getElementById('progressBar').style.width = '100%';
+            
+            // Add event listener to close button
+            setTimeout(() => {
+                document.getElementById('closeResultsBtn').addEventListener('click', closeQuiz);
+            }, 100);
+            
+            // Here you would normally send this data to your backend
+            // For now, we'll just log it
+            console.log({
+                name: userName,
+                email: userEmail,
+                score: results.totalScore,
+                category: results.category,
+                percentage: results.percentage,
+                timestamp: new Date().toISOString()
+            });
+        }
+
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...');
+            
+            // Attach event listeners to all CTA buttons
+            const buttons = ['startQuizBtn1', 'startQuizBtn2', 'startQuizBtn3', 'startQuizBtn4'];
+            buttons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    console.log('Found button:', btnId);
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        startQuiz();
+                    });
+                } else {
+                    console.log('Button not found:', btnId);
+                }
+            });
+            
+            // Close button
+            const closeBtn = document.getElementById('closeQuizBtn');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeQuiz);
+            }
+            
+            // Close modal when clicking outside
+            document.getElementById('quizModal').addEventListener('click', function(e) {
+                if (e.target.id === 'quizModal') {
+                    closeQuiz();
+                }
+            });
         });
     </script>
+        const quizData = {
+            questions: [
+                // Mindset & Beliefs (4 questions)
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "When you think about earning significantly more money in 2026, what's your first thought?",
+                    options: [
+                        { text: "That would be amazing! I'm ready to make it happen.", score: 5 },
+                        { text: "I hope so, but I'm not sure how.", score: 3 },
+                        { text: "That sounds unrealistic for someone like me.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "Complete this sentence: 'People who earn a lot of money are...'",
+                    options: [
+                        { text: "Lucky, privileged, or have connections I don't have.", score: 1 },
+                        { text: "Smart and strategic about opportunities.", score: 3 },
+                        { text: "People who positioned themselves well and took action.", score: 5 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "When you see someone your age succeeding financially, how do you feel?",
+                    options: [
+                        { text: "Inspired and curious about their strategies.", score: 5 },
+                        { text: "A bit jealous, wondering why it's not happening for me.", score: 3 },
+                        { text: "Skeptical—they probably got lucky or did something shady.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Mindset & Beliefs",
+                    question: "How do you respond when opportunities come your way?",
+                    options: [
+                        { text: "I go for it! Even if I'm nervous, I take action.", score: 5 },
+                        { text: "I think about it a lot, then sometimes talk myself out of it.", score: 3 },
+                        { text: "I assume I'm not ready yet or qualified enough.", score: 1 }
+                    ]
+                },
+                
+                // Clarity & Direction (4 questions)
+                {
+                    pillar: "Clarity & Direction",
+                    question: "Can you clearly describe what success looks like for you in 2026?",
+                    options: [
+                        { text: "Yes, I have specific goals and a vision.", score: 5 },
+                        { text: "Kind of—I have general ideas but no clear plan.", score: 3 },
+                        { text: "Not really. I'm just hoping things get better.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "How would you describe your current career or business path?",
+                    options: [
+                        { text: "Clear and focused—I know where I'm going.", score: 5 },
+                        { text: "Confusing—I have too many ideas and don't know which to pursue.", score: 3 },
+                        { text: "Stuck—I'm not sure what direction to take.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "Do you know what makes you valuable in the marketplace?",
+                    options: [
+                        { text: "Yes, I know my unique skills and strengths.", score: 5 },
+                        { text: "I have skills but don't know how to position them.", score: 3 },
+                        { text: "Not really—I feel average or replaceable.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Clarity & Direction",
+                    question: "When making decisions about your future, what guides you?",
+                    options: [
+                        { text: "My clear vision and long-term goals.", score: 5 },
+                        { text: "Whatever feels right in the moment.", score: 3 },
+                        { text: "Fear, pressure, or what others expect of me.", score: 1 }
+                    ]
+                },
+                
+                // Discipline & Habits (4 questions)
+                {
+                    pillar: "Discipline & Habits",
+                    question: "How consistently do you work on your goals?",
+                    options: [
+                        { text: "Daily or almost daily—I'm disciplined.", score: 5 },
+                        { text: "When I feel motivated, which comes and goes.", score: 3 },
+                        { text: "Rarely—I'm easily distracted or overwhelmed.", score: 1 }
+                    ]
+                },
+                {
+                    pillar: "Discipline & Habits",
+                    question: "How do you spend your free time?",
+                    options: [
+                        { text: "Learning, building skills, or working on my goals.", score: 5 },
+                        { text: "A mix—some productive, some just relaxing.", score: 3 },
+                        { text: "Mostly scrolling social media or watching TV.", score: 1 }
+                    ]
+                }   ,
+                {
+                    pillar: "Discipline & Habits",
+                    question: "When faced with a difficult task, what do you usually do?",
+                    options: [  
+                        { text: "Break it down and tackle it step by step.", score: 5 },
+                        { text: "Procrastinate a bit, then rush to finish it.", score: 3 },
+                        { text: "Avoid it or give up if it feels too hard.", score: 1 }
+                    ]
